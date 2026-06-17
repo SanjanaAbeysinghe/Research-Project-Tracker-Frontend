@@ -184,7 +184,7 @@ Relationships:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Research-Project-Tracker-Backend.git
+git clone https://github.com/SanjanaAbeysinghe/Research-Project-Tracker-Backend.git
 ```
 
 ### Navigate to Project
@@ -198,9 +198,9 @@ cd Research-Project-Tracker-Backend
 Update `application.properties`
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/research_tracker
+spring.datasource.url=jdbc:mysql://localhost:/research_tracker
 spring.datasource.username=root
-spring.datasource.password=your_password
+spring.datasource.password=
 ```
 
 ### Run Application

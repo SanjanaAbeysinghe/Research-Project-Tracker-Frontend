@@ -1,73 +1,232 @@
-# React + TypeScript + Vite
+# 🚀 Research Project Tracker System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A secure and scalable Research Project Management System developed using Spring Boot, Spring Security, JWT Authentication, JPA, and MySQL. This application enables educational institutes to manage research projects, milestones, documents, and users with role-based access control.
 
-Currently, two official plugins are available:
+## 📌 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🔐 Authentication & Authorization
 
-## React Compiler
+* User Registration (Sign Up)
+* User Login (JWT Authentication)
+* Secure Password Encryption using BCrypt
+* Role-Based Access Control (ADMIN, PI, MEMBER, VIEWER)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📁 Project Management
 
-## Expanding the ESLint configuration
+* Create Research Projects
+* Update Project Details
+* Manage Project Status
+* View Project Information
+* Delete Projects (Admin Only)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎯 Milestone Management
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Add Project Milestones
+* Update Milestones
+* Track Completion Status
+* Delete Milestones
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 📄 Document Management
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Upload Research Documents
+* View Uploaded Documents
+* Manage Project Resources
+* Delete Documents
+
+### 👥 User Management
+
+* User Registration & Authentication
+* User Profile Management
+* User Role Management
+* Admin User Controls
+
+### 🔒 Security Features
+
+* JWT Token Authentication
+* Spring Security Integration
+* Stateless Authentication
+* Protected REST APIs
+* Custom Exception Handling
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology      | Description                       |
+| --------------- | --------------------------------- |
+| Spring Boot     | Backend Framework                 |
+| Spring Security | Authentication & Authorization    |
+| JWT             | Secure Token-Based Authentication |
+| Spring Data JPA | Database Access Layer             |
+| MySQL           | Database                          |
+| Maven           | Dependency Management             |
+| Lombok          | Boilerplate Code Reduction        |
+| Git & GitHub    | Version Control                   |
+
+---
+
+## 📷 Application Screenshots
+
+### 🔑 Login Page
+
+![Login Page](images/projectpage.jpeg)
+
+---
+
+### 📝 Register Page
+
+![Register Page](images/register.jpeg)
+
+---
+
+### 🏠 Home Dashboard
+
+![Home Dashboard](images/home1.jpeg)
+
+---
+
+### 📁 Project Management Page
+
+![Project Page](images/projectpage.jpeg)
+
+---
+
+### 🎯 Milestone Management Page
+
+![Milestone Page](images/milestone.png)
+
+---
+
+### 📄 Documents Management Page
+
+![Documents Page](images/documents.png)
+
+---
+
+## 🗂️ Project Structure
+
+```text
+src/main/java
+│
+├── auth
+├── config
+├── user
+├── project
+├── milestone
+├── document
+└── common
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔗 API Endpoints
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Authentication
+
+| Method | Endpoint         | Description   |
+| ------ | ---------------- | ------------- |
+| POST   | /api/auth/signup | Register User |
+| POST   | /api/auth/login  | Login User    |
+
+### Projects
+
+| Method | Endpoint                  |
+| ------ | ------------------------- |
+| GET    | /api/projects             |
+| GET    | /api/projects/{id}        |
+| POST   | /api/projects             |
+| PUT    | /api/projects/{id}        |
+| PATCH  | /api/projects/{id}/status |
+| DELETE | /api/projects/{id}        |
+
+### Milestones
+
+| Method | Endpoint                      |
+| ------ | ----------------------------- |
+| GET    | /api/projects/{id}/milestones |
+| POST   | /api/projects/{id}/milestones |
+| PUT    | /api/milestones/{id}          |
+| DELETE | /api/milestones/{id}          |
+
+### Documents
+
+| Method | Endpoint                     |
+| ------ | ---------------------------- |
+| GET    | /api/projects/{id}/documents |
+| POST   | /api/projects/{id}/documents |
+| DELETE | /api/documents/{id}          |
+
+---
+
+## 🗄️ Database
+
+Database: **MySQL**
+
+Main Entities:
+
+* User
+* Project
+* Milestone
+* Document
+
+Relationships:
+
+* One User → Many Projects
+* One Project → Many Milestones
+* One Project → Many Documents
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Research-Project-Tracker-Backend.git
 ```
+
+### Navigate to Project
+
+```bash
+cd Research-Project-Tracker-Backend
+```
+
+### Configure Database
+
+Update `application.properties`
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/research_tracker
+spring.datasource.username=root
+spring.datasource.password=your_password
+```
+
+### Run Application
+
+```bash
+mvn spring-boot:run
+```
+
+---
+
+## 👨‍💻 Author
+
+**Sanjana Deshan**
+
+GitHub: https://github.com/SanjanaAbeysinghe
+
+---
+
+## ⭐ Future Improvements
+
+* File Storage Integration
+* Email Notifications
+* Research Team Collaboration
+* Advanced Search & Filtering
+* Dashboard Analytics
+
+---
+
+## 📜 License
+
+This project is developed for educational purposes under the CMJD Coursework.

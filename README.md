@@ -1,17 +1,17 @@
-# 🚀 Research Project Tracker System
+#  Research Project Tracker System
 
 A secure and scalable Research Project Management System developed using Spring Boot, Spring Security, JWT Authentication, JPA, and MySQL. This application enables educational institutes to manage research projects, milestones, documents, and users with role-based access control.
 
-## 📌 Features
+##  Features
 
-### 🔐 Authentication & Authorization
+###  Authentication & Authorization
 
 * User Registration (Sign Up)
 * User Login (JWT Authentication)
 * Secure Password Encryption using BCrypt
 * Role-Based Access Control (ADMIN, PI, MEMBER, VIEWER)
 
-### 📁 Project Management
+###  Project Management
 
 * Create Research Projects
 * Update Project Details
@@ -19,28 +19,28 @@ A secure and scalable Research Project Management System developed using Spring 
 * View Project Information
 * Delete Projects (Admin Only)
 
-### 🎯 Milestone Management
+###  Milestone Management
 
 * Add Project Milestones
 * Update Milestones
 * Track Completion Status
 * Delete Milestones
 
-### 📄 Document Management
+###  Document Management
 
 * Upload Research Documents
 * View Uploaded Documents
 * Manage Project Resources
 * Delete Documents
 
-### 👥 User Management
+###  User Management
 
 * User Registration & Authentication
 * User Profile Management
 * User Role Management
 * Admin User Controls
 
-### 🔒 Security Features
+###  Security Features
 
 * JWT Token Authentication
 * Spring Security Integration
@@ -50,7 +50,7 @@ A secure and scalable Research Project Management System developed using Spring 
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Technology      | Description                       |
 | --------------- | --------------------------------- |
@@ -65,45 +65,47 @@ A secure and scalable Research Project Management System developed using Spring 
 
 ---
 
-## 📷 Application Screenshots
+##  Application Screenshots
 
-### 🔑 Login Page
+###  Login Page
 
-![Login Page](images/projectpage.jpeg)
+![Login Page](images/login.jpeg)
 
 ---
 
-### 📝 Register Page
+###  Register Page
 
 ![Register Page](images/register.jpeg)
 
 ---
 
-### 🏠 Home Dashboard
+###  Home Dashboard
 
 ![Home Dashboard](images/home1.jpeg)
+![Home Dashboard](images/home2.jpeg)
 
 ---
 
-### 📁 Project Management Page
+###  Project Management Page
 
 ![Project Page](images/projectpage.jpeg)
+![Project Page](images/Addproject.jpeg)
 
 ---
 
-### 🎯 Milestone Management Page
-
-![Milestone Page](images/milestone.png)
-
----
-
-### 📄 Documents Management Page
-
-![Documents Page](images/documents.png)
+###  Milestone Management Page
+![Milestone Page](images/Milestonepage.jpeg) 
+![Milestone Page](images/Addmilestone.jpeg)
 
 ---
 
-## 🗂️ Project Structure
+###  Documents Management Page
+
+![Documents Page](images/Documentpage.jpeg)
+
+---
+
+##  Project Structure
 
 ```text
 src/main/java
@@ -119,14 +121,14 @@ src/main/java
 
 ---
 
-## 🔗 API Endpoints
+##  API Endpoints
 
 ### Authentication
 
-| Method | Endpoint         | Description   |
-| ------ | ---------------- | ------------- |
-| POST   | /api/auth/signup | Register User |
-| POST   | /api/auth/login  | Login User    |
+| Method | Endpoint           | Description   |
+| ------ | ------------------ | ------------- |
+| POST   | /api/auth/register | Register User |
+| POST   | /api/auth/login    | Login User    |
 
 ### Projects
 
@@ -158,7 +160,7 @@ src/main/java
 
 ---
 
-## 🗄️ Database
+##  Database
 
 Database: **MySQL**
 
@@ -177,7 +179,7 @@ Relationships:
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### Clone Repository
 
@@ -209,7 +211,7 @@ mvn spring-boot:run
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Sanjana Deshan**
 
@@ -217,7 +219,7 @@ GitHub: https://github.com/SanjanaAbeysinghe
 
 ---
 
-## ⭐ Future Improvements
+##  Future Improvements
 
 * File Storage Integration
 * Email Notifications
@@ -227,6 +229,6 @@ GitHub: https://github.com/SanjanaAbeysinghe
 
 ---
 
-## 📜 License
+##  License
 
 This project is developed for educational purposes under the CMJD Coursework.
